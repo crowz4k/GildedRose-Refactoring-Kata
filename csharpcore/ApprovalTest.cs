@@ -1,7 +1,10 @@
 ﻿using Xunit;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Threading;
+using FakeItEasy;
 
 namespace csharpcore
 {
@@ -11,7 +14,7 @@ namespace csharpcore
         public void ThirtyDays()
         {
             var lines = File.ReadAllLines("ThirtyDays.txt");
-
+            
             StringBuilder fakeoutput = new StringBuilder();
             Console.SetOut(new StringWriter(fakeoutput));
             Console.SetIn(new StringReader("a\n"));
@@ -22,7 +25,7 @@ namespace csharpcore
             var outputLines = output.Split('\n');
             for(var i = 0; i<Math.Min(lines.Length, outputLines.Length); i++) 
             {
-                Assert.Equal(lines[i], outputLines[i]);
+                Assert.Equal(lines[i], outputLines[i].TrimEnd());
             }
         }
     }
