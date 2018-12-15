@@ -11,5 +11,5 @@ Those commands above will run restore, then it will build it and after that it w
 
 ## Main architecture graph
 
-![Dependecy graph](https://raw.githubusercontent.com/Crowz4k/GildedRose-Refactoring-Kata/csharpcore/master/Graph/DependenciesGraph.png)
+![Dependecy graph](https://raw.githubusercontent.com/crowz4k/GildedRose-Refactoring-Kata/master/csharpcore/Graph/DependenciesGraph.png)
 
